@@ -18,7 +18,7 @@
   ```
 - Run `flask run` to start the development server.
 - API is hosted at http://localhost:5000/
-- Optional: Import 'Flight Log REST API.postman_collection.json' to Postman
+- Optional: Import `Flight Log REST API.postman_collection.json` to Postman
 
 ### Install frontend
 
@@ -29,3 +29,9 @@
   npm start
   ```
 - App is hosted at http://localhost:3000/
+- If imported data to MongoDB, default login is:
+
+```
+email: defaultuser@email.com
+password: nineNINE
+```
