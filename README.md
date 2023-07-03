@@ -7,7 +7,7 @@
 - Uses MongoDB
 - Import `myDatabase.flightLog.json` and `myDatabase.users.json` for data
 
-### Install backend
+### Install Backend REST API
 
 - Clone repository
 - Create a virtual environment, activate it and install the dependencies. For windows:
@@ -20,7 +20,7 @@
 - API is hosted at http://localhost:5000/
 - Optional: Import `Flight Log REST API.postman_collection.json` to Postman
 
-### Install frontend
+### Install Frontend ReactJS
 
 - Navigate to 'frontend' folder
 - For windows:
