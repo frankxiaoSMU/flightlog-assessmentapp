@@ -1,5 +1,5 @@
 # Flight Log App
-
+![](showcase.gif)
 ## Development server
 
 ### Database
