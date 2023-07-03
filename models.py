@@ -19,10 +19,11 @@ class FlightLog:
         return
 
     def create(self, tailNumber="", flightID="", takeoff="", landing="", Duration=""):
-        """Create a new book"""
-        ifexist = self.get_by_id(flightID)
-        if ifexist:
-            return
+        """Create a new flightlog"""
+        # FlightIDs are not unique
+        # ifexist = self.get_by_id(flightID)
+        # if ifexist:
+        #     return
         new_log = db.flightLog.insert_one(
             {
                 "tailNumber": tailNumber,

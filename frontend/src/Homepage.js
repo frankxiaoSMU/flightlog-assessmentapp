@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
+import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -50,6 +51,15 @@ export default function Homepage() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const [flightlog, setFlightLog] = useState([]);
+  const [search, setSearch] = React.useState("");
+
+  const filterflightlog = flightlog.filter((item) =>
+    item.flightID.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const handleSearch = (event) => {
+    setSearch(event.target.value);
+  };
 
   const fetchData = async () => {
     return fetch("http://localhost:5000/flightLog", {
@@ -133,6 +143,15 @@ export default function Homepage() {
           </div>{" "}
         </Toolbar>{" "}
       </AppBar>{" "}
+      <TextField
+        variant="outlined"
+        margin="normal"
+        fullWidth
+        id="search"
+        name="search"
+        label="Search by Flight ID"
+        onChange={handleSearch}
+      />{" "}
       <TableContainer component={Paper}>
         {" "}
         <Table>
@@ -148,7 +167,7 @@ export default function Homepage() {
           </TableHead>{" "}
           <TableBody>
             {" "}
-            {flightlog.map((row) => (
+            {filterflightlog.map((row) => (
               <TableRow key={row.number}>
                 <TableCell key="{row.flightID}" component="th" scope="row">
                   {" "}
@@ -187,7 +206,7 @@ export default function Homepage() {
           </TableBody>{" "}
         </Table>{" "}
       </TableContainer>{" "}
-      <Button variant="outlined" color="inherit" onClick={handleCreate}>
+      <Button fullWidth variant="contained" color="primary" onClick={handleCreate}>
         {" "}
         Add Flight Log{" "}
       </Button>{" "}

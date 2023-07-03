@@ -126,7 +126,7 @@ export default function Editlog() {
               color="primary"
               className={classes.submit}
             >
-              Add{" "}
+              Edit{" "}
             </Button>{" "}
           </form>{" "}
         </div>{" "}
