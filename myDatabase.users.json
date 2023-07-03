@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "64a24bd5ec074c244303303b"
+  },
+  "name": "Holt Raymond",
+  "email": "email@email.com",
+  "password": "pbkdf2:sha256:260000$mKFJY6C3vIFeffcY$b3043cb60d6a4605c7b13397ceb1b7a44173c0c29609a8f3d7a5a0516c6c1de4",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "64a26cc9e9805ea49b64cfa7"
+  },
+  "name": "Jason Mason",
+  "email": "trocc@email.com",
+  "password": "pbkdf2:sha256:260000$IzNFkYTqYUuPeKYT$7e3c961a9f534fdc8d0d729a27e382488caca3f81d27724ced35ebf81e05ca01",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "64a2e178609903d8fefa8157"
+  },
+  "name": "Longitude Latitude",
+  "email": "defaultuser@email.com",
+  "password": "pbkdf2:sha256:260000$rIGwOoBFYbW2HQkL$55520701d745b13d8529c2209a899ab14bb29714a185fb05699aafc87f853805",
+  "active": true
+}]

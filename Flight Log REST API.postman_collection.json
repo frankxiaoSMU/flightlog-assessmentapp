@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "f5e73792-93ac-419b-9731-e6bca4f5121b",
+		"name": "Flight Log REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12922235"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"root@email.com\",\r\n\"name\": \"Jason Mason\",\r\n\"password\": \"nineNINE\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/user/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate User (Log in)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"defaultuser@email.com\",\r\n\"password\": \"nineNINE\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/user/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Flight Log",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tailNumber",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "flightID",
+							"value": "789",
+							"type": "text"
+						},
+						{
+							"key": "takeoff",
+							"value": "14:00",
+							"type": "text"
+						},
+						{
+							"key": "landing",
+							"value": "16:00",
+							"type": "text"
+						},
+						{
+							"key": "Duration",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:5000/flightLog/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Flight Log",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tailNumber",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "takeoff",
+							"value": "cdeezNUTS",
+							"type": "text"
+						},
+						{
+							"key": "landing",
+							"value": "24",
+							"type": "text"
+						},
+						{
+							"key": "Duration",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:5000/flightLog/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Flight Log",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:5000/flightLog/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Flight Log",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/flightLog"
+			},
+			"response": []
+		}
+	]
+}

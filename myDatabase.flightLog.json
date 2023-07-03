@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "64a2dca1609903d8fefa8155"
+  },
+  "tailNumber": "4666",
+  "flightID": "S4ND",
+  "takeoff": "2017-05-24T10:30",
+  "landing": "2017-05-24T10:30",
+  "Duration": "0"
+},
+{
+  "_id": {
+    "$oid": "64a2dec1609903d8fefa8156"
+  },
+  "tailNumber": "A2-6",
+  "flightID": "WrongTurn",
+  "takeoff": "2017-05-24T10:30",
+  "landing": "2017-05-24T10:30",
+  "Duration": "0"
+}]
